@@ -4,6 +4,7 @@
 
 Detona Ralf é um jogo de quebra-cabeça para dois jogadores. O objetivo do jogo é derrotar a parede de tijolos maligna usando diferentes habilidades e itens.
 
+
 ![Detona Ralf](./docs/screen-game.png)
 
 ## Regras
