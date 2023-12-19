@@ -52,7 +52,7 @@ const randomSquare = () => {
 }
 
 const playSound = (fileName) => {
-    const sound = new Audio(`./assets/sounds/${fileName}.m4a`);
+    const sound = new Audio(`./src/assets/sounds/${fileName}.m4a`);
     sound.volume = 0.2;
     sound.play();
 }
@@ -73,8 +73,6 @@ const addListenerHitBox = () => {
         });
     });
 }
-
-
 
 const init = () => {
     state.tasks.initTransitionForRalphOnSquare();
