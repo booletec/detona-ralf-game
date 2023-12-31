@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../src/assets/images/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="../src/assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/main.css">
-    <title>Detona Ralfh game development</title>
+    <title>Passa tempo jogo pega nato</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
            </div>
            <div class="lives">
             <img src="./src/assets/images/player.png" width="60">
-            <h2>x3</h2>
+            <h2 id="life">x3</h2>
            </div>
         </div>
         <div class="panel">
@@ -49,8 +49,21 @@
                 <div class="square" id="9"></div>
             </div>
         </div>
+        <div class="footer">
+            <button id="start" class="enable" onclick="init()">Iniciar</button>
+        </div>
     </div>
-    
+    <div class="modal">
+        <div class="modal-content">
+            <h1 id="modal-title" class="title"></h1>
+            <p id="modal-message" class="message">
+            </p>
+            <button onclick="state.views.showModal(false)">Fechar</button>
+        </div>
+
+       
+    </div>
+
 
     <script defer src="./src/scripts/engine.js"></script>
 </body>

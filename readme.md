@@ -2,37 +2,24 @@
 
 ## Resumo
 
-Detona Ralf é um jogo de quebra-cabeça para dois jogadores. O objetivo do jogo é derrotar a parede de tijolos maligna usando diferentes habilidades e itens.
+Pega pega é um jogo de astucia e velocidade de visão. O objetivo do jogo é pegar o Nato enquanto ele tenta escapar de seus olhos.
 
+Para começar a joga-lo agora, <a href="https://booletec.github.io/detona-ralf-game/" target="_blank">clique aqui</a>
 
-![Detona Ralf](./docs/screen-game.png)
+![Pegue o nato](./docs/screen-game.png)
 
 ## Regras
 
-* O jogo é jogado em uma tela dividida horizontalmente. Cada jogador controla um personagem, Ralf ou Vanellope.
-* Os personagens podem se mover para a esquerda, para a direita, para cima e para baixo.
-* Os personagens podem usar itens para interagir com o ambiente.
-* A parede de tijolos maligna é a principal ameaça do jogo. Ela pode atacar os personagens com lasers e projéteis.
+* Você tem  60 segundos para fazer pegar o nato 30 vezes.
 
-## Habilidades e itens
+* O personagem nato pode se mover entre os vãos da janela que se encontra no centro do muro.
 
-* **Ralf:** Ralf pode usar seu martelo para quebrar tijolos. Ele também pode usar seu gancho para pegar itens e se mover para cima.
- 
-* **Vanellope:** Vanellope pode usar sua habilidade de correr para se mover mais rápido. Ela também pode usar seu poder de teletransporte para se mover para qualquer lugar na tela.
-[Image of Vanellope, o personagem do jogo Detona Ralf]
+* Faça 30 pontos em menos de um minuto e veja que você estará mais acordado.
 
-## Objetos
-
-* **Tijolos:** Os tijolos podem ser quebrados com o martelo de Ralf ou com a habilidade de correr de Vanellope.
-* **Chaves:** As chaves abrem portas que levam a novos níveis.
-* **Moedas:** As moedas podem ser coletadas para ganhar pontos.
-
-## Vencedor
-
-O jogador que derrotar a parede de tijolos maligna primeiro vence o jogo.
+* Se você fizer 30 pontos em um minuto você ganha uma vida, caso contrário você perde uma vida. 
 
 ## Dicas
 
-* Use as habilidades e itens dos personagens para sua vantagem.
-* Não deixe que a parede de tijolos maligna o atinja.
-* Colete moedas para ganhar pontos e aumentar sua pontuação final.
+* Muito cuidado, caso você não consiga pegar o Nato nos vãos, você quebrará a janela e perderá 1 ponto.
+
+* Convide seus amigos para disputar partidas com você.
