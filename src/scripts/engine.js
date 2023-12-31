@@ -23,15 +23,15 @@ const state = {
         actualSquare: 0,
         lifeResult: 3,
         timeLeftCounterDownInSeconds: 30,
-        intervalToTransition: 1000
+        intervalToTransition: 1000,
+        gameRunning: true
     },
     tasks: {
         initTransitionForNatoOnSquare: async () => setInterval(randomSquare, state.values.intervalToTransition),
         initTimeLeftCountDown: async () => setInterval(() => {
-
             state.views.timeLeft.textContent = state.values.timeLeftCounterDownInSeconds -= 1;
             state.tasks.monitoringWinner();
-        }, 1 * 1000)
+        }, 1000)
         ,
         monitoringWinner: () => {
             if (state.values.timeLeftCounterDownInSeconds === 0) {
@@ -42,7 +42,7 @@ const state = {
                 });
                 playSound("game-over");
                 state.views.life.textContent = `x${(state.values.lifeResult -= 1)}`;
-                state.values.intervalToTransition += 100;
+                state.values.intervalToTransition += 200;
                 stopAndClear();
 
             } else if (state.values.resultPoint >= 15) {
@@ -52,7 +52,7 @@ const state = {
                     message: "Você é feraaaaaaaaa demais, da próxima vez eu não vou ser tão lento assim..."
                 });
                 playSound("win");
-                state.values.intervalToTransition -= 100;
+                state.values.intervalToTransition -= 200;
                 stopAndClear();
             }
         }
@@ -81,7 +81,7 @@ const addListenerHitBox = () => {
         square.addEventListener("mousedown", () => {
             //quero que minha pontuação seja somada quando clicar no square aonde o Nato aparece
             if (square.id === state.values.actualSquare) {
-                state.views.score.textContent = state.values.resultPoint += 1;
+                state.views.score.textContent = state.values.resultPoint += 1;;
                 let sounds = ["essa-doeu", "na-cara-nao"];
                 let soundToPlayIndex = Math.floor(Math.random() * sounds.length);
                 playSound(sounds[soundToPlayIndex]);
@@ -93,6 +93,7 @@ const addListenerHitBox = () => {
     });
 }
 
+
 let taskTrasitionForNatoOnSquareId;
 let taskInitTimeLeftCountDownId;
 
@@ -102,13 +103,17 @@ const init = async () => {
     state.views.buttonStartDisabled(true);
     taskTrasitionForNatoOnSquareId = await state.tasks.initTransitionForNatoOnSquare();
     taskInitTimeLeftCountDownId = await state.tasks.initTimeLeftCountDown();
-    addListenerHitBox();
+    if(state.values.gameRunning) addListenerHitBox();
 }
 
 const stopAndClear = () => {
     state.values.resultPoint = 0;
+    state.values.timeLeftCounterDownInSeconds = 30;
+
     clearInterval(taskTrasitionForNatoOnSquareId);
     clearInterval(taskInitTimeLeftCountDownId);
     state.views.buttonStartDisabled(false);
     document.querySelector(".panel").classList.add("disableContent");
+    state.values.gameRunning = false;
+
 }
